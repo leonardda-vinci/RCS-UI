@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="font-sans bg-gray-100">
+  <div class="md:container mx-auto p-4 w-full">
+    <div class="flex flex-row mt-5 gap-2">
+      <div>
+        <aside class="w-auto">
+          <mat-drawer-container class="relative flex h-full w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-2 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+            <mat-drawer-content class="min-w-full flex-col gap-1 p-1 font-sans text-base font-normal text-blue-gray-700">
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:underline cursor-pointer group bg-gray-200 underline">
+                <span class="text-sm p-2">Personal Information</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2 hover:underline">Address Book</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Order</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Favorites</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Shopping List</span>
+              </div>
+            </mat-drawer-content>
+          </mat-drawer-container>
+        </aside>
+      </div>
+
+      <div class="w-full">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h1 class="flex text-2xl font-bold pb-2">
+            Account Details
+          </h1>
+          <span class="text-sm font-bold">Contact Information</span>
+
+          <div>
+            <form>
+              <div class="grid grid-cols-2 gap-2">
+                <mat-form-field class="max-w-sm space-y-3">
+                  <input matInput type="text" class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-500" placeholder="First Name"/>
+                </mat-form-field>
+                <mat-form-field class="max-w-sm space-y-3">
+                  <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
+                  dark:focus:ring-neutral-500" placeholder="Last Name" />
+                </mat-form-field>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 mt-2">
+                <mat-form-field class="max-w-sm space-y-3">
+                  <input matInput type="text" class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-500" placeholder="Address 1"/>
+                </mat-form-field>
+                <mat-form-field class="max-w-sm space-y-3">
+                  <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
+                  dark:focus:ring-neutral-500" placeholder="Address 2" />
+                </mat-form-field>
+              </div>
+
+              <div class="mt-2 w-1/2">
+                <mat-form-field class="w-[96px] space-y-3 mt-2">
+                  <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
+                  dark:focus:ring-neutral-500" placeholder="City" />
+                </mat-form-field>
+              </div>
+
+              <div class="mt-2 w-1/2">
+                <mat-form-field class="w-[96px] space-y-3 mt-2">
+                  <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
+                  dark:focus:ring-neutral-500" placeholder="Postal Code" />
+                </mat-form-field>
+              </div>
+
+              <div class="mt-2 w-1/2">
+                <mat-form-field class="w-[96px] space-y-3 mt-2 flex items-center">
+                    <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
+                  dark:focus:ring-neutral-500" placeholder="Phone"  required />
+                 </div>
+                </mat-form-field>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+</head>
+<style></style>
+<body class="font-sans bg-gray-100">
+  <div class="md:container mx-auto p-4 w-full">
+    <div class="flex flex-col">
+      <h1 class="flex text-2xl font-bold pb-2">
+        Sign Up
+      </h1>
+      <p class="mt-5 text-sm">Already have an account? <a href="#" class="underline text-blue-500">Sign-in here.</a></p>
+
+      <form class="max-w-sm mx-auto mt-5 w-full">
+        <mat-form-field class="mb-5">
+          <mat-label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</mat-label>
+          <input matInput type="text" required id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name">
+          <input matInput type="text" required id="name" class="mt-2 mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg foucs:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Last Name">
+        </mat-form-field>
+
+        <mat-form-field class="mb-5">
+          <mat-label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</mat-label>
+          <input matInput type="email" required id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email Address">
+          <input matInput type="email" required id="email" class="mt-2 mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Re-Enter Email Address">
+        </mat-form-field>
+
+        <mat-form-field class="">
+          <div class="container mx-auto mt-8">
+            <label for="password" class="block text-sm font-medium text-gray-900 dark:text-white">Password:</label>
+            <div class="relative">
+              <input type="password" id="password" name="password" class="mt-2 mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Password">
+              <span class="toggle-password absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-gray-600 dark:text-gray-400" onclick="togglePasswordVisibility('password')">
+                <i class="fas fa-eye-slash"></i> <!-- Hide password icon -->
+                <i class="fas fa-eye hidden"></i> <!-- Show password icon -->
+              </span>
+            </div>
+          </div>
+          
+          <div class="container mx-auto">
+            <label for="confirmPassword" class="block text-sm font-medium text-gray-900 dark:text-white">Confirm Password:</label>
+            <div class="relative">
+              <input matInput type="password" required id="confirmPassword" class="mt-2 mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Re-Enter Password">
+              <span class="toggle-password absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-gray-600 dark:text-gray-400" onclick="togglePasswordVisibility('confirmPassword')">
+                <i class="fas fa-eye-slash"></i> <!-- Hide password icon -->
+                <i class="fas fa-eye hidden"></i> <!-- Show password icon -->
+              </span>
+            </div>
+          </div>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label class="block mb-2 text-sm font-medium mt-4 text-gray-900 dark:text-white">Date of Birth</mat-label>
+          <div class="flex flex-row gap-2">
+            <mat-form-field>
+              <select name="month" id="month" class="w-full p-4 ps-10 pr-1 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400">
+              </select>
+            </mat-form-field>
+            <mat-form-field>
+              <select name="day" id="day" class="w-full p-4 ps-10 pr-2 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400">
+              </select>
+            </mat-form-field>
+            <mat-form-field>
+              <select name="year" id="year" class="w-full p-4 ps-10 pr-2 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"></select>
+            </mat-form-field>
+          </div>
+        </mat-form-field>
+
+        <div class="flex justify-end">
+          <button type="submit" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Create Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility(inputId) {
+      const passwordInput = document.getElementById(inputId);
+      const toggleBtn = passwordInput.nextElementSibling;
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleBtn.querySelector('.fa-eye-slash').classList.add('hidden');
+        toggleBtn.querySelector('.fa-eye').classList.remove('hidden');
+      } else {
+        passwordInput.type = "password";
+        toggleBtn.querySelector('.fa-eye-slash').classList.remove('hidden');
+        toggleBtn.querySelector('.fa-eye').classList.add('hidden');
+      }
+    }
+
+    //Create references to the dropdown's
+    const yearSelect = document.getElementById("year");
+    const monthSelect = document.getElementById("month");
+    const daySelect = document.getElementById("day");
+
+    const months = ['January', 'February', 'March', 'April', 
+    'May', 'June', 'July', 'August', 'September', 'October',
+    'November', 'December'];
+
+    //Months are always the same
+    (function populateMonths(){
+        for(let i = 0; i < months.length; i++){
+            const option = document.createElement('option');
+            option.textContent = months[i];
+            monthSelect.appendChild(option);
+        }
+        monthSelect.value = "January";
+    })();
+
+    let previousDay;
+
+    function populateDays(month){
+        //Delete all of the children of the day dropdown
+        //if they do exist
+        while(daySelect.firstChild){
+            daySelect.removeChild(daySelect.firstChild);
+        }
+        //Holds the number of days in the month
+        let dayNum;
+        //Get the current year
+        let year = yearSelect.value;
+
+        if(month === 'January' || month === 'March' || 
+        month === 'May' || month === 'July' || month === 'August' 
+        || month === 'October' || month === 'December') {
+            dayNum = 31;
+        } else if(month === 'April' || month === 'June' 
+        || month === 'September' || month === 'November') {
+            dayNum = 30;
+        }else{
+            //Check for a leap year
+            if(new Date(year, 1, 29).getMonth() === 1){
+                dayNum = 29;
+            }else{
+                dayNum = 28;
+            }
+        }
+        //Insert the correct days into the day <select>
+        for(let i = 1; i <= dayNum; i++){
+            const option = document.createElement("option");
+            option.textContent = i;
+            daySelect.appendChild(option);
+        }
+        if(previousDay){
+            daySelect.value = previousDay;
+            if(daySelect.value === ""){
+                daySelect.value = previousDay - 1;
+            }
+            if(daySelect.value === ""){
+                daySelect.value = previousDay - 2;
+            }
+            if(daySelect.value === ""){
+                daySelect.value = previousDay - 3;
+            }
+        }
+    }
+
+    function populateYears(){
+        //Get the current year as a number
+        let year = new Date().getFullYear();
+        //Make the previous 100 years be an option
+        for(let i = 0; i < 101; i++){
+            const option = document.createElement("option");
+            option.textContent = year - i;
+            yearSelect.appendChild(option);
+        }
+    }
+
+    populateDays(monthSelect.value);
+    populateYears();
+
+    yearSelect.onchange = function() {
+        populateDays(monthSelect.value);
+    }
+    monthSelect.onchange = function() {
+        populateDays(monthSelect.value);
+    }
+    daySelect.onchange = function() {
+        previousDay = daySelect.value;
+    }
+    </script>
+</body>
+</html>

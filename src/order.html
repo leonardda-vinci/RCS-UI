@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="font-sans bg-gray-100">
+  <div class="md:container mx-auto p-4 w-full">
+    <div class="flex flex-row mt-5 gap-2">
+      <div>
+        <aside class="w-auto">
+          <mat-drawer-container class="relative flex h-full w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-2 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+            <mat-drawer-content class="min-w-full flex-col gap-1 p-1 font-sans text-base font-normal text-blue-gray-700">
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Personal Information</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Address Book</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:underline cursor-pointer group underline bg-gray-200">
+                <span class="text-sm p-2">Order</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Favorites</span>
+              </div>
+              <div class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:underline cursor-pointer group">
+                <span class="text-sm p-2">Shopping List</span>
+              </div>
+            </mat-drawer-content>
+          </mat-drawer-container>
+        </aside>
+      </div>
+
+      <div class="w-full">
+        <div class="bg-white rounded-lg shadow-lg p-4">
+          <h1 class="flex text-2xl font-bold pb-2">
+            Orders
+          </h1>
+          <div class="flex gap-1">
+            <button type="button" class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disables:opacity-50 disabled:shadows-none">Last 30 Days</button>
+            <button type="button" class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disables:opacity-50 disabled:shadows-none">Last 6 Months</button>
+            <button type="button" class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disables:opacity-50 disabled:shadows-none">Last Year</button>
+            <button type="button" class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disables:opacity-50 disabled:shadows-none">All</button>
+          </div>
+
+          <div class="mt-2">
+            <button type="button" class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disables:opacity-50 disabled:shadows-none">Start Shopping</button>
+          </div>
+
+          <div class="mt-5">
+            <p>
+              You do not have any orders.
+            </p>
+            <p>
+              Did you know we can do the shopping for you? and even deliver it?
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
