@@ -44,35 +44,35 @@
 
           <div>
             <form>
-              <div class="grid grid-cols-2 gap-2">
-                <mat-form-field class="max-w-sm space-y-3">
+              <div class="grid grid-cols-2 gap-2 w-full">
+                <mat-form-field>
                   <input matInput type="text" class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-500" placeholder="First Name"/>
                 </mat-form-field>
-                <mat-form-field class="max-w-sm space-y-3">
+                <mat-form-field>
                   <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
                   dark:focus:ring-neutral-500" placeholder="Last Name" />
                 </mat-form-field>
               </div>
 
               <div class="grid grid-cols-2 gap-2 mt-2">
-                <mat-form-field class="max-w-sm space-y-3">
+                <mat-form-field>
                   <input matInput type="text" class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-500" placeholder="Address 1"/>
                 </mat-form-field>
-                <mat-form-field class="max-w-sm space-y-3">
+                <mat-form-field>
                   <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
                   dark:focus:ring-neutral-500" placeholder="Address 2" />
                 </mat-form-field>
               </div>
 
               <div class="mt-2 w-1/2">
-                <mat-form-field class="w-[96px] space-y-3 mt-2">
+                <mat-form-field>
                   <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
                   dark:focus:ring-neutral-500" placeholder="City" />
                 </mat-form-field>
               </div>
 
               <div class="mt-2 w-1/2">
-                <mat-form-field class="w-[96px] space-y-3 mt-2">
+                <mat-form-field>
                   <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
                   dark:focus:ring-neutral-500" placeholder="Postal Code" />
                 </mat-form-field>
@@ -80,16 +80,289 @@
 
               <div class="mt-2 w-1/2">
                 <mat-form-field class="w-[96px] space-y-3 mt-2 flex items-center">
-                    <input type="text" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
-                  dark:focus:ring-neutral-500" placeholder="Phone"  required />
-                 </div>
+                    <input type="tel" pattern="[+]{1}[0-9]{11,14}" matInput class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500
+                  dark:focus:ring-neutral-500" placeholder="Phone" required />
                 </mat-form-field>
+              </div>
+
+              <hr class="mt-5">
+
+              <div class="grid grid-cols-2 gap-2 mt-5">
+                 <mat-form-field class="w-full">
+                  <mat-label class="text-sm font-bold">Select Your RCS Delivery Store</mat-label>
+                  <select name="store" id="store" class="w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></select>
+                 </mat-form-field> 
+                 <div>
+                  <span>My WalterMart Delivery Store</span>
+                  <div class="bg-gray-300 text-xs font-semibold py-2 px-6 flex flex-col">
+                    <a href="" class="text-red-600 hover:underline ">WalterMart Quezon City - Visayas Avenue</a> GF Anchor Unit 3 Wilcon City Center <br>
+                    Visayas Ave<br>
+                    Bahay Toro<br>
+                    Quezon City, Metro Manila 1106<br>
+                    09999935816<br>
+                    09190835993
+                    <p class="mt-4">We'd be happy to help you in any way possible.</p>
+                    <p class="mt-4">Ouside the delivery area? Find a supermarket near you.</p>
+                    <a href="#" class="text-red-600 hover:underline">RCS Supermarkets</a>
+
+                    <p class="mt-4">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@example.com</p>
+                  </div>
+                 </div> 
+              </div>
+
+              <hr class="my-5">
+
+              <div>
+                <span class="text-sm font-medium dark:text-gray-300">
+                  Current Email Address
+                </span>
+                <p class="text-sm">example@example.com</p>
+                <a href="#" class="font-bold text-sm text-red-600 hover:underline" id="change-email">Change Email Address</a>
+              </div>
+
+              <hr class="my-5">
+
+              <a href="#" class="font-bold text-sm text-red-600 hover:underline" id="changePassword">Change Password</a>
+
+              <hr class="my-5">
+
+              <a href="#" class="font-bold text-sm text-red-600 hover:underline" id="sign-out">Sign out</a>
+
+              <hr class="my-5">
+
+              <div>
+                <mat-form-field>
+                  <mat-label class="block mb-2 text-sm font-medium mt-4 text-gray-900 dark:text-white">Date of Birth</mat-label>
+                  <div class="flex flex-row gap-2">
+                    <mat-form-field>
+                      <select name="month" id="month" class="w-full p-4 ps-10 pr-1 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-ray-400">
+                      </select>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <select name="day" id="day" class="w-full p-4 ps-10 pr-1 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-ray-400"></select>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <select name="year" id="year" class="w-full p-4 ps-10 pr-1 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-ray-400"></select>
+                    </mat-form-field>
+                  </div>
+                </mat-form-field>
+
+                <div class="flex justify-end mt-3">
+                  <button type="submit" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover-bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Update</button>
+                </div>
+              </div>
               </div>
             </form>
           </div>
         </div>
       </div>
+
+      <div id="modal-overlay" class="fixed top-0 left-0 w-full h-full bg-gray-900 opacity-50 z-40 hidden"></div>
+
+      <div id="change-email-address" tabindex="-1" aria-hidden="true" class="hidden fixed top-0 right-0 bottom-0 left-0 z-50 flex justify-center items-center">
+        <div class="p-4 max-w-2xl w-full mx-h-full">
+          <div class="p-4 bg-white rounded-lg shadow sm:p-5">
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5">
+              <h3>Change Email Address</h3>
+              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" id="close-button">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  <span class="sr-only">Close Modal</span>
+                </svg>
+              </button>
+            </div>
+            <span class="flex gap-2 text-gray-900 rounded-lg dark:text-white cursor-pointer text-sm font-bold">Current Email Address: <p class="font-normal"> example@example.com</p></span>
+
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <mat-form-field>
+                <mat-label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New Email Address</mat-label>
+                <input type="email" matInput id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Re-Enter Email Address</mat-label>
+                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Re-Enter Email Address">
+              </mat-form-field>
+
+            </div>
+            <div class="flex justify-end gap-2">
+              <button type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-red-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Cancel</button>
+              <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Change</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="change-password" tabindex="-1" aria-hidden="true" class="hidden fixed top-0 right-0 bottom-0 left-0 z-50 flex justify-center items-center">
+        <div class="p-4 max-w-2xl w-full mx-h-full">
+          <div class="p-4 bg-white rounded-lg shadow sm:p-5">
+            <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5">
+              <h3>Change Password</h3>
+              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:texy-gray-900 rounded-lg text-sm p-1.5 ml-auto inline flex items-center" id="close-button2">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  <span class="sr-only">Close Modal</span>
+                </svg>
+              </button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <mat-form-field>
+                <mat-label class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Old Password</mat-label>
+                <input type="password" id="old-password" name="old-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Old Password">
+
+                <p class="text-xs italic text-gray-700 mt-2">
+                  Your password must be at lease eight characters long and may include letters (upper & lower case), numbers and symbols. A strong password combines all three.
+                </p>
+              </mat-form-field>
+              <div>
+                <mat-form-field>
+                  <mat-label class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">New Password</mat-label>
+                  <input type="password" id="new-password" name="new-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Old Password">
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label class="block mt-3 mb-1 text-sm font-medium text-gray-900 dark:text-white">Re-Enter Password</mat-label>
+                  <input type="password" id="old-password" name="old-password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Old Password">
+                </mat-form-field>
+              </div>             
+            </div>
+            
+            <div class="flex justify-end gap-2">
+              <button type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ouline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-red-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Cancel</button>
+              <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Change</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const changeEmail = document.getElementById("change-email");
+      const changePass = document.getElementById("changePassword");
+      const changeEmailAdd = document.getElementById("change-email-address");
+      const changePassword = document.getElementById("change-password");
+      const modalOverlay = document.getElementById("modal-overlay");
+      const closeButton = document.getElementById("close-button");
+      const closeBtn = document.getElementById("close-button2");
+
+      changePass.addEventListener("click", function () {
+        changePassword.classList.toggle("hidden");
+        modalOverlay.classList.toggle("hidden");
+      });
+      closeBtn.addEventListener("click", function () {
+        changePassword.classList.add("hidden");
+        modalOverlay.classList.toggle("hidden");
+      })
+    
+      changeEmail.addEventListener("click", function () {
+        changeEmailAdd.classList.toggle("hidden");
+        modalOverlay.classList.toggle("hidden")
+      });
+
+      closeButton.addEventListener("click", function () {
+        changeEmailAdd.classList.add("hidden");
+        modalOverlay.classList.toggle("hidden");
+      });
+    });
+
+
+    const yearSelect = document.getElementById("year");
+    const monthSelect = document.getElementById("month");
+    const daySelect = document.getElementById("day");
+
+    const months = ['Month', 'January', 'February', 'March', 'April', 
+    'May', 'June', 'July', 'August', 'September', 'October',
+    'November', 'December'];
+
+    (function populateMonths(){
+        for(let i = 0; i < months.length; i++){
+            const option = document.createElement('option');
+            option.textContent = months[i];
+            monthSelect.appendChild(option);
+        }
+        monthSelect.value = "Month";
+    })();
+
+    let previousDay;
+
+    function populateDays(month) {
+      while(daySelect.firstChild) {
+        daySelect.removeChild(daySelect.firstChild);
+      }
+      let dayNum;
+      let year = yearSelect.value;
+
+      if(month === 'January' || month === 'March' || 
+        month === 'May' || month === 'July' || month === 'August' 
+        || month === 'October' || month === 'December') {
+            dayNum = 31;
+        } else if(month === 'April' || month === 'June' 
+        || month === 'September' || month === 'November') {
+            dayNum = 30;
+        }else{
+            //Check for a leap year
+            if(new Date(year, 1, 29).getMonth() === 1){
+                dayNum = 29;
+            }else{
+                dayNum = 28;
+            }
+        }
+
+        // Adding default "Day" option
+        const defaultDayOption = document.createElement("option");
+        defaultDayOption.textContent = "Day";
+        daySelect.appendChild(defaultDayOption);
+
+        for (let i = 1; i <= dayNum; i++) {
+          const option = document.createElement("option");
+          option.textContent = i;
+          daySelect.appendChild(option);
+        }
+        
+        if(previousDay) {
+          daySelect.value = previousDay;
+          if(daySelect.value === "") {
+            daySelect.value = previousDay - 1;
+          }
+          if(daySelect.value === "") {
+            daySelect.value = previousDay - 2;
+          }
+          if(daySelect.value === "") {
+            daySelect.value = previousDay - 3;
+          }
+        }
+    }
+
+    function populateYears() {
+      let year = new Date().getFullYear();
+      // Adding default "Year" option
+      const defaultYearOption = document.createElement("option");
+      defaultYearOption.textContent = "Year";
+      yearSelect.appendChild(defaultYearOption);
+
+      for(let i = 0; i < 101; i++) {
+        const option = document.createElement("option");
+        option.textContent = year - i;
+        yearSelect.appendChild(option);
+      }
+    }
+
+    populateDays(monthSelect.value);
+    populateYears();
+
+    yearSelect.onchange = function() {
+      populateDays(monthSelect.value);
+    }
+    monthSelect.onchange = function() {
+      populateDays(monthSelect.value);
+    }
+    daySelect.onchange = function() {
+      previousDay = daySelect.value;
+    }
+
+    </script>
 </body>
 </html>
