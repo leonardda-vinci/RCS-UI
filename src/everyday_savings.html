@@ -17,11 +17,11 @@
           <h1 class="flex text-2xl font-bold pb-2">
             Weekly Ad
           </h1>
-          <div class="flex justify-between items-center">
+          <div class="md:flex md:justify-between md:items-center grid grid-col-1">
             <div>
               <span class="font-bold">Prices good 03/04/2024 through 06/30/2024</span>
             </div>
-            <div class="flex hover:text-blue-600 cursor-pointer gap-2 ">
+            <div class="flex hover:text-blue-600 cursor-pointer gap-2 mt-5 md:mt-0">
               <!-- icons -->
               <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 20 25" xml:space="preserve">
                 <g transform="translate(-270 -200)">
@@ -47,10 +47,10 @@
         </div>
         <hr class="mt-2"/>
     
-        <div class="md:grid md:grid-cols-5 mt-10 gap-2 w-auto">
+        <div class="grid md:grid-cols-5 grid-cols-1 mt-10 gap-2 w-full hidden md:block">
           <div class="md:col-span-4">
             <div>
-              <mat-form-field class="col-span-2">
+              <mat-form-field class="md:col-span-2">
                 <!-- <mat-label class=""></mat-label> -->
                 <div class="relative">
                   <svg class="w-8 h-8 icon absolute left-2 top-2/4 transform -translate-y-3 -translate-x-0.2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
@@ -75,14 +75,26 @@
             </mat-form-field>
           </div>
         </div>
+
+        <div>
+          <mat-form-field class="hover:underline">
+            <mat-label class="text-red-600">Filters</mat-label>
+            <select name="filters" id="filters" class="mt-5 ">
+              
+              <option name="" id="">
+                <mat-form-field>saadadada</mat-form-field>
+              </option>
+            </select>
+          </mat-form-field>
+        </div>
       </header>
       
       <div class="flex flex-row mt-5 gap-2">
         <div>
           <aside class="w-auto">
-              <mat-drawer-container class="relative flex h-full w-full max-w-[15rem] flex-col rounded-xl bg-white bg-clip-border p-2 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+              <mat-drawer-container class="relative flex h-full w-full max-w-[15rem] flex-col rounded-xl bg-white bg-clip-border p-2 text-gray-700 shadow-xl shadow-blue-gray-900/5 hidden md:block">
                 <mat-drawer mode="side" class="p-1 mb-2">
-                  <h5 class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <h5 class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 ">
                     Show
                   </h5>
                 </mat-drawer>
@@ -152,7 +164,7 @@
         </div>
 
         <div>
-          <mat-card class="grid grid-cols-5 gap-2">
+          <mat-card class="grid grid-cols-1 md:grid-cols-5 gap-2">
             <mat-card-content class="bg-white p-3 rounded-lg shadow-md max-w-sm dark:bg-gray-800 dark:border-gray-700">
               <a href="">
                 <img class="rounded-lg" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60?a=b" alt="">
