@@ -76,9 +76,99 @@
           </div>
         </div>
 
-        <div>
+        <div class="mt-5 md:hidden">
           <!-- https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp -->
+          <button class="bg-white rounded-lg p-4 text-gray-700 shadow-md cursor-pointer" aria-hidden="true" onclick="hideShow()">
+            Filters
+            <i class="fa fa-angle-down fa-custom ml-2 text-gray-700" aria-hidden="true" id="down"></i>
+            <i class="fa fa-angle-up fa-custom ml-2 text-gray-700" aria-hidden="true" id="up" style="display:none;"></i>
+          </button>
+          <div id="filters" class="hidden bg-white rounded-lg shadow-lg mt-2 p-4 w-full">
+            <div class="grid grid-cols-1 gap-2 w-auto">
+              <mat-form-field>
+                <div class="relative">
+                  <svg class="w-8 h-8 icon absolute left-2 top-2/4 transform -translate-y-3 -translate-x-0.2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                    <path d="m86.625 81.668-13.125-13.125c8.4844-10.195 11.066-24.066 6.8203-36.633-4.2461-12.566-14.711-22.027-27.641-24.984-12.93-2.9609-26.469 1.0039-35.758 10.469-9.2891 9.4688-13 23.082-9.7969 35.953s12.859 23.156 25.504 27.164c12.645 4.0078 26.461 1.1641 36.496-7.5117l13.082 13.082c0.58594 0.58984 1.3789 0.92188 2.2109 0.91797 0.83203 0.019531 1.6328-0.3125 2.207-0.91797 0.59375-0.57812 0.92969-1.375 0.92969-2.207s-0.33594-1.6289-0.92969-2.207zm-65.082-15c-6.0273-5.9922-9.4219-14.137-9.4375-22.633s3.3477-16.652 9.3516-22.668c6-6.0117 14.148-9.3945 22.648-9.3945 8.4961 0 16.645 3.3828 22.648 9.3945 6.0039 6.0156 9.3672 14.172 9.3516 22.668-0.019531 8.4961-3.4141 16.641-9.4375 22.633-6.0078 5.9414-14.117 9.2734-22.562 9.2734-8.4492 0-16.559-3.332-22.562-9.2734z"/></svg>
+                    <input type="search" placeholder="Search..." class="w-full p-4 pl-12 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+              </mat-form-field>
+              <div class="grid grid-cols-2 gap-2">
+                <mat-form-field>
+                  <select name="per-page" id="per-page" class="w-full p-4 ps-10 pr-1 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500">
+                    <option value="" selected>Per page: 24</option>
+                    <option value="">Per page: 23</option>
+                  </select>
+                </mat-form-field>
+                <mat-form-field>
+                  <select name="sort" id="sort" class="w-full p-4 ps-10 pr-1 flex items-center text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="" selected>Sort: Popularity</option>
+                    <option value=""></option>
+                  </select>
+                </mat-form-field>
+              </div>
+              <div>
+                <h5 class="font-bold text-sm">Show</h5>
+                <div class="mt-2 mb-4">
+                  <mat-form-field class="flex items-center">
+                    <input type="checkbox" name="checkbox" id="checkbox" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-lg dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                    <mat-label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">My Favorites</mat-label>
+                  </mat-form-field>
+                  <mat-form-field class="flex items-center">
+                    <input type="checkbox" name="checkbox" id="checkbox" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-lg dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                    <mat-label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Purchased by Me</mat-label>
+                  </mat-form-field>
+                  <mat-form-field class="flex items-center">
+                    <input type="checkbox" name="checkbox" id="checkbox" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-lg dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                    <mat-label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Just For Me</mat-label>
+                  </mat-form-field>
+                </div>
+
+                <div class="pb-2">
+                  <a href="#" class="font-thin text-sm hover:underline hover:text-gray-600 text-gray-900">
+                    All Categories
+                  </a>
+                </div>
+
+                <div>
+                  <div class="transition">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 items-center pl-1 hover:bg-gray-200 rounded-lg">
+                      <i class="fas fa-plus"></i>
+                      <span class="text-sm">What's New!</span>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                      <p class="leading-6 font-light text-justify">Lorem Ipsum</p>
+                    </div>
+                  </div>
+
+                  <div class="transition">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 items-center pl-1 hover:bg-gray-200 rounded-lg">
+                      <i class="fas fa-plus"></i>
+                      <span class="text-sm">Shop By Brand</span>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                      <p class="leading-6 font-light text-justify">
+                        Dolor sit amet
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="transition">
+                    <div class="accordion-header cursor-pointer transition flex space-x-5 items-center pl-1 hover:bg-gray-20 rounded-lg">
+                      <i class="fas fa-plus"></i>
+                      <span class="text-sm">Shop By Category</span>
+                    </div>
+                    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+                      <p class="leading-6 font-light text-justify">
+                        consectetur adipscing elit
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
         </div>
+        
       </header>
       
       <div class="flex flex-row mt-5 gap-2">
@@ -276,13 +366,7 @@
         </div>
       </div>
     </div>
-
-    
-
-    
-
   </div>
-
   <style>
     .accordion-content {
       transition: max-height 0.3s ease-out, padding 0.3s ease;
@@ -290,6 +374,24 @@
   </style>
 
   <script>
+    function hideShow() {
+      var x = document.getElementById("filters");
+      var downArrow = document.getElementById("down");
+      var upArrow = document.getElementById("up");
+
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        downArrow.style.display = "none";
+        upArrow.style.display = "inline";
+      } else {
+        x.style.display = "none";
+        downArrow.style.display = "inline";
+        upArrow.style.display = "none";
+      }
+    }
+
+
+
     const accordionHeader = document.querySelectorAll(".accordion-header");
     accordionHeader.forEach((header) => {
     header.addEventListener("click", function () {
