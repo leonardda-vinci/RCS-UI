@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EveryMailers</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 font-sans">
+  <div class="md:container mx-auto p-4 w-full">
+    <div>
+      <h1 class="font-bold text-2xl pb-5">Everyday Mailers</h1>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper rounded-lg">
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/user/erondu/3000x900" alt="image" class="object-cover w-full h-96">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/collection/190727/3000x900" alt="image" class="object-cover w-full h-96">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://source.unsplash.com/collection/190728/3000x900" alt="image" class="object-cover w-full h-96">
+        </div>
+      </div>
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="everyday_mailers.js"></script>
+</body>
+</html>
