@@ -13,507 +13,897 @@
     <div class="flex flex-col">
       <h1 class="flex text-2xl font-bold pb-2">Store Locator</h1>
 
-      <div class="flex flex-row mt-5 gap-2">
-        <div>
-          <aside class="w-full">
-            <mat-drawer-container class="relative flex h-full w-full max-w-[15rem] flex-col rounded-xl bg-white bg-clip-border p-3 text-gray-700 shadow-xl shadow-blue-gray-900/5">
-              <mat-drawer-content mode="side" class="p-1 mb-2">
-                <div>
-                  <mat-label class="block font-sans text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                    Entry City and State, or Postal Code
-                  </mat-label>
-                  <input type="text" name="city" id="city" class="p-3 w-full text-sm border border-gray-200 rounded-lg mt-2" placeholder="Enter City and State, or Postal Code">
-                </div>
-                <div class="mt-2">
-                  <mat-form-field class="flex flex-1 flex-row gap-2">
-                    <mat-label>Within:</mat-label>
-                    <select name="within" id="within" class="w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></select>
-                  </mat-form-field>
-                </div>
-
-                <div class="mt-5">
-                  <h3 class="font-semibold">
-                    Store Services (optional)
-                  </h3>
-                  <mat-form-field class="flex justify-between items-center">
-                    <mat-label class="ms-2 text-sm font-medium dark:text-gray-300">Pick Up</mat-label>
-                    <input type="checkbox" name="pickup" id="pickup" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-full dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
-                  </mat-form-field>
-                  <mat-form-field class="flex justify-between items-center">
-                    <mat-label class="ms-2 text-sm font-medium dark:text-gray-300">Delivery</mat-label>
-                    <input type="checkbox" name="delivery" id="delivery" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-full dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
-                  </mat-form-field>
-                </div>
-              </mat-drawer-content>
-            </mat-drawer-container>
-          </aside>
+      <div class="hidden md:block">
+        <div class="flex flex-row mt-5 gap-2">
+          <div>
+            <aside class="w-full">
+              <mat-drawer-container class="relative flex h-full w-full max-w-[15rem] flex-col rounded-xl bg-white bg-clip-border p-3 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+                <mat-drawer-content mode="side" class="p-1 mb-2">
+                  <div>
+                    <mat-label class="block font-sans text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                      Entry City and State, or Postal Code
+                    </mat-label>
+                    <input type="text" name="city" id="city" class="p-3 w-full text-sm border border-gray-200 rounded-lg mt-2" placeholder="Enter City and State, or Postal Code">
+                  </div>
+                  <div class="mt-2">
+                    <mat-form-field class="flex flex-1 flex-row gap-2">
+                      <mat-label>Within:</mat-label>
+                      <select name="within" id="within" class="w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></select>
+                    </mat-form-field>
+                  </div>
+  
+                  <div class="mt-5">
+                    <h3 class="font-semibold">
+                      Store Services (optional)
+                    </h3>
+                    <mat-form-field class="flex justify-between items-center">
+                      <mat-label class="ms-2 text-sm font-medium dark:text-gray-300">Pick Up</mat-label>
+                      <input type="checkbox" name="pickup" id="pickup" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-full dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                    </mat-form-field>
+                    <mat-form-field class="flex justify-between items-center">
+                      <mat-label class="ms-2 text-sm font-medium dark:text-gray-300">Delivery</mat-label>
+                      <input type="checkbox" name="delivery" id="delivery" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-full dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                    </mat-form-field>
+                  </div>
+                </mat-drawer-content>
+              </mat-drawer-container>
+            </aside>
+          </div>
+  
+          <div class="container">
+            <!-- embed google maps -->
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19QC_z0DBtKh8QY9YFQg2mFs3ng8vJWQ&ehbc=2E312F&noprof=1" width="100%" height="100%" class="rounded-lg shadow-lg"></iframe>
+          </div>
         </div>
-
-        <div class="container">
-          <!-- embed google maps -->
-          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19QC_z0DBtKh8QY9YFQg2mFs3ng8vJWQ&ehbc=2E312F&noprof=1" width="100%" height="100%" class="rounded-lg shadow-lg"></iframe>
+        
+        <div class="mt-2">
+          <mat-card class="grid grid-cols-3 md:grid-cols-5 gap-4">
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+    
+                </div>
+            </mat-card-content>
+            <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours:</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex justify-center">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+    
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+    
+                  <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
+                </div>
+            </mat-card-content>
+          </mat-card>
         </div>
       </div>
 
-      <div class="mt-2">
-        <mat-card class="grid grid-cols-3 md:grid-cols-5 gap-4">
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+      <div class="md:hidden">
+        <div class="grid grid-cols-1 gap-2">
+          <div class="bg-white p-4 rounded-lg shadow-md grid grid-cols-1 gap-2">
+            <mat-form-field>
+              <mat-label class="block font-sans text-sm antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                Enter City and State, or Postal Code:
+              </mat-label>
+              <input type="text" name="city" id="city" class="p-3 w-full text-sm border border-gray-200 rounded-lg mt-2" placeholder="Enter City and State, or Postal Code">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label class="block font-sans text-md antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-sm mb-2">Within: </mat-label>
+              <select name="within" id="within" class="w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="" selected>Km</option>
+                <option value="">15 km</option>
+              </select>
+            </mat-form-field>
+            <mat-form-field>
+              <h3 class="font-semibold text-sm">Store Services (optional)</h3>
+              <mat-form-field class="flex items-center gap-3">
+                <input type="checkbox" name="pickup" id="pickup" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-full dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                <mat-label class="text-sm font-medium dark:text-gray-300">Pick Up</mat-label>
+              </mat-form-field>
+              <mat-form-field class="flex items-center gap-3">
+                <input type="checkbox" name="pickup" id="delivery" class="w-4 h-4 text-blue-600 bg-gray-300 border-gray-300 rounded-full dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600 cursor-pointer">
+                <mat-label class="text-sm font-medium dark:text-gray-300">Delivery</mat-label>
+              </mat-form-field>
+            </mat-form-field>
+          </div>
+          <div class="container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19QC_z0DBtKh8QY9YFQg2mFs3ng8vJWQ&ehbc=2E312F&noprof=1" frameborder="0" width="100%" height="400"></iframe>
+          </div>
+          <div class="mt-2">
+            <mat-card class="grid grid-cols-1 gap-4">
+              <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
                   </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
                 </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
                   </div>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
                   </div>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
                   </div>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                  <div class="my-4 flex flex-col">
+                    <span class="font-semibold text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-xs text-red-600 hover:underline">RCS Supermarket</a>
                   </div>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
                   </div>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
-                </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
-                </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
-                </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
-                </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
-                </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
-                </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
-                </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-  
-              </div>
-          </mat-card-content>
-          <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
-              <div class="bg-gray-300 py-3">
-                <div class="flex flex-1 mx-1">
-                  <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
-                    <g transform="translate(0,-952.36218)">
-                      <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
-                    </g>
-                  </svg>
-                  <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
-                </div>
-                <p class="text-sm mx-8 text-gray-700">Location</p>
-              </div>
-              <div class="px-5 mt-2 mb-4">
-                <div class="container">
-                  <span class="font-semibold text-sm">Store Services:</span>
-                  <div class="flex">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
-                    </a>
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-                        <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
-                    </a>
+                  <div class="my-4 flex">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
                   </div>
+
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+
+                  <p class="mt-4 text-sm text-gray-700">
+                    Offers Grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and Delivery (order via 1234-5678 or Viber: 0912 345 6789).
+                  </p>
                 </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Hours:</span>
-                  <p class="text-xs text-gray-700">8AM-9PM</p>
+              </mat-card-content>
+              <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
                 </div>
-                <div>
-                  <span class="font-semibold text-sm text-gray-700">Phone:</span>
-                  <p class="text-xs text-gray-700">09123456789</p>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="font-semibold text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-xs text-red-600 hover:underline">RCS Supermarket</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+
+                  <p class="mt-4 text-sm text-gray-700">
+                    Offers Grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and Delivery (order via 1234-5678 or Viber: 0912 345 6789).
+                  </p>
                 </div>
-                <div class="my-4">
-                  <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+              </mat-card-content>
+              <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
                 </div>
-                <div class="my-4 flex flex-col">
-                  <span class="text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
-                  <a href="#" class="text-sm undeline text-red-600 hover:underline">RCS Supermarkets</a>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="font-semibold text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-xs text-red-600 hover:underline">RCS Supermarket</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+
+                  <p class="mt-4 text-sm text-gray-700">
+                    Offers Grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and Delivery (order via 1234-5678 or Viber: 0912 345 6789).
+                  </p>
                 </div>
-                <div class="my-4">
-                  <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+              </mat-card-content>
+              <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
                 </div>
-                <div class="my-4 flex justify-center">
-                  <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="font-semibold text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-xs text-red-600 hover:underline">RCS Supermarket</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+
+                  <p class="mt-4 text-sm text-gray-700">
+                    Offers Grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and Delivery (order via 1234-5678 or Viber: 0912 345 6789).
+                  </p>
                 </div>
-  
-                <div class="flex flex-col">
-                  <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
-                  <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
-                  <a href="#" class="text-red-600 text-sm underline">About Us</a>
+              </mat-card-content>
+              <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
                 </div>
-  
-                <p class="mt-4 text-sm text-gray-700">Offers grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and delivery (order via 1234-5678 or Viber: 0912 345 6789).</p>
-              </div>
-          </mat-card-content>
-        </mat-card>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="font-semibold text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-xs text-red-600 hover:underline">RCS Supermarket</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+
+                  <p class="mt-4 text-sm text-gray-700">
+                    Offers Grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and Delivery (order via 1234-5678 or Viber: 0912 345 6789).
+                  </p>
+                </div>
+              </mat-card-content>
+              <mat-card-content class="bg-white shadow-lg w-full dark:bg-gray-800 dark:border-gray-700">
+                <div class="bg-gray-300 py-3">
+                  <div class="flex flex-1 mx-1">
+                    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                      <g transform="translate(0,-952.36218)">
+                        <path style="baseline-shift:baseline;block-progression:tb;color:#FF0000;direction:ltr;text-indent:0;enable-background:accumulate;text-transform:none;" fill="#FF0000" d="m50,962.71c-15.413,0-27.844,11.818-27.844,26.344,0,4.8357,1.3728,9.3528,3.7812,13.25a0.75008,0.75008,0,0,1,0.03125,0.062,0.75008,0.75008,0,0,1,0.03125,0.062l0.03125,0.062a0.75008,0.75008,0,0,1,0,0.031l24.125,39.5,23.906-39.688a0.75008,0.75008,0,0,1,0.03125,-0.062,0.75008,0.75008,0,0,1,0.03125,-0.094h0.03125c0.005-0.01-0.005-0.021,0-0.031,0.0121-0.019,0.01921-0.043,0.03125-0.062,2.3272-3.8484,3.6562-8.2843,3.6562-13.031,0-14.477-12.348-26.263-27.688-26.344-0.05292-0.00028-0.10326,0-0.15625,0zm0,8.5c9.8976,0,17.906,7.5992,17.906,16.969,0,9.3695-8.0087,16.969-17.906,16.969-9.8976,0-17.906-7.5992-17.906-16.969,0-9.3695,8.0087-16.969,17.906-16.969z"/>
+                      </g>
+                    </svg>
+                    <span class="font-bold text-sm">RCS Supermarket F. Tañedo</span>
+                  </div>
+                  <p class="text-sm mx-8 text-gray-700">Location</p>
+                </div>
+                <div class="px-5 mt-2 mb-4">
+                  <div class="container">
+                    <span class="font-semibold text-sm">Store Services:</span>
+                    <div class="flex">
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve"><path d="M6.233,57.909H61.03c1.557,0,2.818-1.262,2.818-2.818V26.228c0-3.416-2.767-6.185-6.183-6.185H11.183  C7.769,20.043,5,22.813,5,26.228v30.448C5,57.357,5.553,57.909,6.233,57.909z"/><path d="M93.617,64.083l-0.009-11.322c0.002-1.138-0.545-2.802-1.221-3.717l-11.62-15.711c-0.68-0.916-2.149-1.657-3.288-1.657  H67.195c-0.681,0-1.232,0.552-1.232,1.233v24.296c0,1.557-1.263,2.818-2.819,2.818H6.233C5.553,60.022,5,60.574,5,61.256v7.533  c0,2.276,1.846,4.122,4.122,4.122h4.645c0-5.06,4.104-9.16,9.162-9.16c5.058,0,9.158,4.101,9.158,9.16h37.841  c0-5.058,4.101-9.16,9.16-9.16c5.057,0,9.159,4.103,9.159,9.16h2.618c2.29,0,4.136-1.846,4.136-4.122v-2.771  C95,65.12,94.421,64.363,93.617,64.083z M85.119,50.196c0,0.682-0.554,1.237-1.238,1.237H72.636c-0.682,0-1.236-0.555-1.236-1.237  V38.349c0-0.682,0.555-1.237,1.236-1.237h2.904c0.684,0,1.566,0.445,1.974,0.995l6.87,9.262c0.405,0.55,0.735,1.406,0.735,1.912  V50.196z"/><circle cx="79.087" cy="72.911" r="7.046"/><circle cx="22.928" cy="72.911" r="7.046"/></svg>
+                      </a>
+                      <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-7 cursor pointer" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+                          <path d="m93.75 37.504h-16.594l-11.719-19.844c-0.60547-1.625-2.4102-2.4492-4.0312-1.8438-1.6211 0.60156-2.4492 2.4062-1.8438 4.0312l10.938 17.656h-41l10.938-17.656c0.60547-1.625-0.22266-3.4297-1.8438-4.0312-1.6211-0.60547-3.4258 0.21875-4.0312 1.8438l-11.719 19.844h-16.594c-1.7266 0-3.125 1.3984-3.125 3.125 0 1.7266 1.3984 3.125 3.125 3.125h3.9062l7.4062 33.844c1.1758 4.0078 4.8516 6.7695 9.0312 6.7812h46.812c4.1875-0.015625 7.8672-2.7891 9.0312-6.8125l7.4062-33.812h3.9062c1.7266 0 3.125-1.3984 3.125-3.125 0-1.7266-1.3984-3.125-3.125-3.125zm-56.25 31.25c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125zm15.625 0c0 1.7266-1.3984 3.125-3.125 3.125s-3.125-1.3984-3.125-3.125v-12.5c0-1.7266 1.3984-3.125 3.125-3.125s3.125 1.3984 3.125 3.125z"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Hours</span>
+                    <p class="text-xs text-gray-700">8AM-9PM</p>
+                  </div>
+                  <div>
+                    <span class="font-semibold text-sm text-gray-700">Phone:</span>
+                    <p class="text-xs text-gray-700">09123456789</p>
+                  </div>
+                  <div class="my-4">
+                    <span class="font-semibold text-sm text-gray-700">We'd be happy to help you in any way possible.</span>
+                  </div>
+                  <div class="my-4 flex flex-col">
+                    <span class="font-semibold text-sm text-gray-700">Outside the delivery area? Find a store near you.</span>
+                    <a href="#" class="text-xs text-red-600 hover:underline">RCS Supermarket</a>
+                  </div>
+                  <div class="my-4">
+                    <span class="text-sm text-gray-700">Call us at 1234-5678 on Mondays to Saturdays between 8am-5pm email us at companyemail@gmail.com</span>
+                  </div>
+                  <div class="my-4 flex">
+                    <button type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3 shadow-lg">Make This My Store</button>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <a href="#" class="text-red-600 text-sm underline">View Weekly Add</a>
+                    <a href="#" class="text-red-600 text-sm underline">Get Directions</a>
+                    <a href="#" class="text-red-600 text-sm underline">About Us</a>
+                  </div>
+
+                  <p class="mt-4 text-sm text-gray-700">
+                    Offers Grocery delivery, pickup, and park & pick-up. Also offers Call Me Wally same day and Delivery (order via 1234-5678 or Viber: 0912 345 6789).
+                  </p>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
       </div>
+
+
     </div>
   </div>
 </body>
