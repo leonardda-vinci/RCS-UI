@@ -45,7 +45,7 @@
             <button type="button" id="add-new-address" class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[-0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">New Address</button>
           </div>
           <div class="bg-white rounded-lg border border-gray-200 shadow-lg mt-3 p-4">
-            <div class="grid grid-cols-2">
+            <div class="md:grid md:grid-cols-2 grid-cols-1">
               <ng-container class="flex justify-start">
                 <mat-form-field>
                   <mat-label class="font-bold text-sm">
@@ -55,7 +55,7 @@
                 </mat-form-field>
               </ng-container>
               <ng-container class="flex justify-start">
-                <mat-form-field>
+                <mat-form-field class="md:mt-0 mt-5">
                   <mat-label class="font-bold text-sm">
                     Modified Date
                   </mat-label>
